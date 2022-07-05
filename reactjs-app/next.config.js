@@ -4,7 +4,7 @@ const BASE_URL = {
 }
 
 module.exports = {
-  basePath: '/reactjs',
+  // basePath: '/reactjs',
   async rewrites() {
     return [
       {
