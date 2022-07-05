@@ -1,11 +1,9 @@
 
 const BASE_URL = {
-  reactjs: 'https://reactjs-micro-frontend-base.vercel.app',
+  reactjs: process.env.NODE_ENV === 'production' ? 'https://reactjs-micro-frontend-base.vercel.app' : 'http://localhost:3001',
 }
 
 module.exports = {
-  trailingSlash: true,
-  basePath: '/reactjs',
   async rewrites() {
     return [
       {
