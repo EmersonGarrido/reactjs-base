@@ -1,8 +1,14 @@
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import logo from '../logo.svg';
 const Routes = (): JSX.Element => {
   return (
     <Switch>
+      <Route exact path="/" render={() => {
+        return (
+          <Redirect push to="/reactjs" />
+        )
+      }}
+      />
       <Route exact path="/reactjs" render={() => {
         return (
           <div className="App">
